@@ -14,7 +14,7 @@
 int main(void)
 {
   bspInit();
-  ledInit();
+  //ledInit();
   //i2c_scanner();
 
   //I2C_Config();
@@ -22,8 +22,11 @@ int main(void)
   while(1)
   {
 
-    ledToggle(1);
-    delay(500);
+    //ledToggle(0);
+    //ledToggle(1);
+    //delay(1000);
+    CDC_Transmit_HS("hello\n", 7);
+    delay(1000);
   }
 
   return 0;

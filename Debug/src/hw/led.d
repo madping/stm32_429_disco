@@ -1,7 +1,7 @@
 src/hw/led.o: ../src/hw/led.c \
  C:/dev/stm_project/stm32429disco_my/src/hw/inc/led.h \
- C:/dev/stm_project/stm32429disco_my/src/common/inc/def.h \
  C:/dev/stm_project/stm32429disco_my/src/bsp/bsp.h \
+ C:/dev/stm_project/stm32429disco_my/src/common/inc/def.h \
  C:/dev/stm_project/stm32429disco_my/src/lib/cube_f429/USB_DEVICE/App/usb_device.h \
  C:/dev/stm_project/stm32429disco_my/src/lib/cube_f429/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  C:/dev/stm_project/stm32429disco_my/src/lib/cube_f429/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h \
@@ -43,9 +43,9 @@ src/hw/led.o: ../src/hw/led.c \
 
 C:/dev/stm_project/stm32429disco_my/src/hw/inc/led.h:
 
-C:/dev/stm_project/stm32429disco_my/src/common/inc/def.h:
-
 C:/dev/stm_project/stm32429disco_my/src/bsp/bsp.h:
+
+C:/dev/stm_project/stm32429disco_my/src/common/inc/def.h:
 
 C:/dev/stm_project/stm32429disco_my/src/lib/cube_f429/USB_DEVICE/App/usb_device.h:
 

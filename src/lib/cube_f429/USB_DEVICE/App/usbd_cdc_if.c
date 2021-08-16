@@ -24,6 +24,23 @@
 
 /* USER CODE BEGIN INCLUDE */
 
+uint32_t rx_in = 0;
+uint32_t rx_out = 0;
+uint32_t rx_len = 512;
+uint8_t rx_buf[512];
+
+
+// 수신 버퍼에 데이터가 몇개 있는지 확인
+unt32_t cdcAvaliable(void)
+{
+  uint32_t ret;
+
+  ret = (rx_in - rx_out) % rx_len;
+
+  return ret;
+}
+
+
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/

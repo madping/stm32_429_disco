@@ -13,4 +13,6 @@
 #include "i2c.h"
 #include "led.h"
 
+extern uint8_t CDC_Transmit_HS(uint8_t* Buf, uint16_t Len);
+
 #endif /* SRC_MAIN_H_ */

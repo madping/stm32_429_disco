@@ -14,4 +14,5 @@
 #include <stdbool.h>
 
 
+
 #endif /* SRC_COMMON_DEF_H_ */

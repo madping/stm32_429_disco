@@ -20,10 +20,9 @@ typedef struct
 
 led_tbl_t led_tbl[LED_MAX_CH] =
     {
-       // {GPIOG, GPIO_PIN_13, GPIO_PIN_SET, GPIO_PIN_RESET},
+        {GPIOG, GPIO_PIN_13, GPIO_PIN_SET, GPIO_PIN_RESET},
         {GPIOG, GPIO_PIN_14, GPIO_PIN_SET, GPIO_PIN_RESET}
     };
-
 
 
 bool ledInit(void)
@@ -32,7 +31,7 @@ bool ledInit(void)
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-  __HAL_RCC_GPIOG_CLK_ENABLE();
+ // __HAL_RCC_GPIOG_CLK_ENABLE();
 
 
   //HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13|GPIO_PIN_14, GPIO_PIN_RESET);
@@ -72,7 +71,6 @@ void ledOff(uint8_t ch)
 
 void ledToggle(uint8_t ch)
 {
+  if(ch >= LED_MAX_CH) return;
   HAL_GPIO_TogglePin(led_tbl[ch].port, led_tbl[ch].pin);
 }
-
-

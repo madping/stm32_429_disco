@@ -18,7 +18,25 @@ void bspInit(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  //__HAL_RCC_GPIOG_CLK_ENABLE();
+  __HAL_RCC_GPIOG_CLK_ENABLE();
+
+/*USB 리셋
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  GPIO_InitStruct.Pin = GPIO_PIN_16;  // usb_dp
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_16, GPIO_PIN_RESET);
+  delay(100);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_16, GPIO_PIN_SET);
+
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+*/
+
 
   //MX_GPIO_Init();
   MX_USB_DEVICE_Init();
